@@ -1,2 +1,2 @@
 FLASK_ENV=development
-FLASK_APP=tracker-api
+FLASK_APP=tracker_api

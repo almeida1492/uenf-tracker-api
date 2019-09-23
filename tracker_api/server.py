@@ -6,6 +6,7 @@ from .models import Location
 
 main = Blueprint('main', __name__)
 
+
 @main.route('/')
 def root():
     return jsonify(location={

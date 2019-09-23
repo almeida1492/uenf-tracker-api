@@ -1,3 +1,3 @@
-from tracker-api import create_app
+from tracker_api import create_app
 
 app = create_app()

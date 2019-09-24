@@ -26,7 +26,10 @@ def locations():
 
 @main.route('/sendLocation', methods=['POST'])
 def sendLocation():
-    location = Location(1, 229035, 43209622)
+    location = Location(
+        coordinateX=229035,
+        coordinateY=43209622
+    )
     db.session.add(location)
     db.commit()
 

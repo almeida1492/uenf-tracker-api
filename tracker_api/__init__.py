@@ -2,7 +2,6 @@ from flask import Flask
 
 from .commands import create_tables
 from .extensions import db
-from .models import Location
 from .routes import main
 
 

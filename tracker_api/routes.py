@@ -24,13 +24,13 @@ def locations():
         return "Empty database"
 
 
-# @main.route('/sendLocation', methods=['POST'])
-# def sendLocation():
-#     location = Location(1, 229035, 43209622)
-#     db.session.add(location)
-#     db.commit()
+@main.route('/sendLocation', methods=['POST'])
+def sendLocation():
+    location = Location(1, 229035, 43209622)
+    db.session.add(location)
+    db.commit()
 
-#     return jsonify(location={
-#         'coordinateX': 229035,
-#         'coordinateY': 43209622,
-#     })
+    return jsonify(location={
+        'coordinateX': 229035,
+        'coordinateY': 43209622,
+    })

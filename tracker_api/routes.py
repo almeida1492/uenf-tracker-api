@@ -18,7 +18,7 @@ def root():
 @main.route('/locations')
 def locations():
     locations = db.session.query(Location).all()
-    if locations.__(len)__ > 0:
+    if len(locations) > 0:
         return jsonify(locations=[location.serialize for location in locations])
     else:
         return "Empty database"
@@ -34,4 +34,3 @@ def locations():
 #         'coordinateX': 229035,
 #         'coordinateY': 43209622,
 #     })
-    

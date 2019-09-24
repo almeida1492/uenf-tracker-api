@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*- a
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, request
 
 from .extensions import db
 from .models import Location
@@ -24,16 +24,19 @@ def locations():
         return "Empty database"
 
 
-@main.route('/sendLocation', methods=['POST'])
-def sendLocation():
+@main.route('/send', methods=['POST'])
+def send():
+    body = request.get_json()
+    coordinateX = body['coordinateX']
+    coordinateY = body['coordinateY']
     location = Location(
-        coordinateX=229035,
-        coordinateY=43209622
+        coordinateX=coordinateX,
+        coordinateY=coordinateY
     )
     db.session.add(location)
     db.session.commit()
 
     return jsonify(location={
-        'coordinateX': 229035,
-        'coordinateY': 43209622,
+        'coordinateX': coordinateX,
+        'coordinateY': coordinateY,
     })

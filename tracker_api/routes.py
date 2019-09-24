@@ -31,7 +31,7 @@ def sendLocation():
         coordinateY=43209622
     )
     db.session.add(location)
-    db.commit()
+    db.session.commit()
 
     return jsonify(location={
         'coordinateX': 229035,

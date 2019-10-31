@@ -51,7 +51,7 @@ def busca():
         return "Não há nada registrado."
 
 
-@main.route('/atualiza', methods=['POST'])
+@main.route('/atualizas', methods=['POST'])
 def envia():
     body = request.get_json()
 

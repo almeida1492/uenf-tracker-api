@@ -15,7 +15,7 @@ class Location(db.Model):
         }
 
 
-class posicao(db.Model):
+class Posicao(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     latitude = db.Column(db.Float)
     longitude = db.Column(db.Float)

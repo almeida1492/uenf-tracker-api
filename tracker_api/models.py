@@ -17,11 +17,11 @@ class Location(db.Model):
 
 class Posicao(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    latitude = db.Column(db.Integer)
-    longitude = db.Column(db.Integer)
+    latitude = db.Column(db.Float)
+    longitude = db.Column(db.Float)
     idadeInfo = db.Column(db.Integer)
     data = db.Column(db.String)
-    altitude = db.Column(db.Integer)
+    altitude = db.Column(db.Float)
     velocidade = db.Column(db.Integer)
     sentido = db.Column(db.Integer)
     satelites = db.Column(db.Integer)

@@ -65,7 +65,7 @@ def envia():
     satelites = body['satelites']
     precisao = body['precisao']
 
-    posicao = db.session.query(Posicao).filter_by(id=1).one()
+    posicao = db.session.query(Posicao).all()
 
     if len(posicao) > 0:
         posicao.latitude = latitude

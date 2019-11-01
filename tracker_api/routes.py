@@ -68,15 +68,15 @@ def envia():
     posicao = db.session.query(Posicao).all()
 
     if len(posicao) > 0:
-        posicao.latitude = latitude
-        posicao.longitude = longitude
-        posicao.idadeInfo = idadeInfo
-        posicao.data = data
-        posicao.altitude = altitude
-        posicao.velocidade = velocidade
-        posicao.sentido = sentido
-        posicao.satelites = satelites
-        posicao.precisao = precisao
+        posicao[0].latitude = latitude
+        posicao[0].longitude = longitude
+        posicao[0].idadeInfo = idadeInfo
+        posicao[0].data = data
+        posicao[0].altitude = altitude
+        posicao[0].velocidade = velocidade
+        posicao[0].sentido = sentido
+        posicao[0].satelites = satelites
+        posicao[0].precisao = precisao
     else:
         posicao = Posicao(
             latitude=latitude,
